@@ -18,7 +18,7 @@ void sort(std::map<int, std::string>& list) {
     int count = static_cast<int>(list.size());
     for (int i = 0; i <= count; i++) {
         for (int j = 0; j < count - 1; j++) {
-            if (list[j] > list[j + 1]) {
+            if (tolower(list[j][0]) > tolower(list[j + 1][0])) {
                 std::string k = list[j];
                 list[j] = list[j + 1];
                 list[j + 1] = k;
